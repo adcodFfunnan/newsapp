@@ -1,0 +1,149 @@
+.header {
+    position: fixed;
+    top:0;
+    background-color:#ffffff;
+    height:80px;
+    width: 100%;
+    z-index: 1;
+    border-bottom:1px solid rgba(229,231,235);
+    overflow-y: hidden;
+    transition: transform .5s;
+}
+
+.header.hide {
+    transform: translateY(-80px);
+}
+
+.header > .navbar {
+    position: relative;
+    width:80%;
+    left:10%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > .navbar > img {
+    height: 100%;
+}
+
+.header > .navbar > .menu {
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+.header > .navbar.showSearch > .menu {
+    display: none;
+}
+
+.header > .navbar > .menu > a {
+    padding:1rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 1rem;
+    color:#343a40;
+}
+
+.header > .navbar > .menu > a.selected {
+    border-bottom: 2px solid #007bff;
+}
+
+.header > .navbar > .menu > a.disabled {
+    pointer-events: none;
+    color: rgba(229,231,235);
+}
+.navbar > .search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.navbar.navbar.showSearch > .search {
+    flex-grow: 1;
+}
+
+.navbar > .search form{
+    display: none;
+}
+
+.navbar.showSearch > .search form{
+    display: block;
+    flex-basis: 100%;
+}
+
+.navbar > .search > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.header > .navbar > svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .header > .navbar {
+        width: 95%;
+        left: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header > .navbar > .menu, .header > .navbar.showSearch > .menu  {
+        position: fixed;
+        top:82px;
+        width: 100%;
+        left:0;
+        height: 0;
+        word-break: break-word;
+        overflow-y: scroll;
+        display: block;
+        transition: height 1s;
+    }
+
+    .header > .navbar > .menu.mobileMenu {
+        height: 100vh;
+        
+    }
+
+    .header > .navbar > .menu > a {
+        display: block;
+        padding:1rem 0;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom:1px solid rgba(229,231,235);
+        margin-left: 0;
+    }
+
+    .header > .navbar > .menu > a.selected {
+        border-bottom:1px solid rgba(229,231,235);
+        color:#007bff;
+    }
+
+    .header > .navbar > .menu > a > span {
+        margin-left: 2rem;
+    }
+    
+
+    .header > .navbar > .menu::-webkit-scrollbar {
+        display: none;
+    } /* hide scrollbar on Chrome, Safari and Opera */ 
+
+    .header > .navbar > .menu {
+        -ms-overflow-style: none; /* hide scrollbar on IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .header > .navbar > .search {
+        flex-grow: 1;
+    }
+}
+
+

@@ -1,0 +1,198 @@
+.ShowSearchResults {
+    position: relative;
+    top: 80px;
+}
+
+
+.ShowSearchResults > .searchNavbar {
+    margin-top: 50px;
+    position: relative;
+    width: 60%;
+    left:20%;
+    margin-bottom: 1rem;
+
+    display: flex;
+     justify-content: space-between;
+ }
+
+.ShowSearchResults > .searchNavbar > form.search {
+     flex-basis: 60%;
+ }
+
+.ShowSearchResults > .searchNavbar > form.search > input:focus {
+     border-color: #ffda69;
+     box-shadow: 0 0 0 0.2rem rgb(255 193 7 / 25%);
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect {
+    position: relative;
+    flex-basis: 30%;
+}
+
+.ShowSearchResults > .searchNavbar .costumSelect > .options {
+   background-color: #fff;
+   border: 1px solid #ced4da;
+   border-radius: .25rem;
+   position: absolute;
+   width: 100%;
+   z-index: 2;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect input[readonly] {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect input[readonly]:focus {
+    border-color: #ffda69;
+    box-shadow: 0 0 0 0.2rem rgb(255 193 7 / 25%);
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect > .options.hide {
+    display: none;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect:not(:hover) > .options {
+   display: none;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect > .options > span {
+    display: block;
+    padding: .3rem 0 .5rem .3rem;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect > .options:not(:hover) > span.selected {
+    background-color: #ffc107;
+}
+
+.ShowSearchResults > .searchNavbar > .costumSelect > .options > span:hover{
+    background-color: #ffc107;
+    cursor: pointer;
+}
+
+.ShowSearchResults > .showNews {
+    position: relative;
+    width: 60%;
+    left:20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ShowSearchResults > .showNews > .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom:2rem;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.ShowSearchResults > .showNews > .card > .image {
+    flex-basis: 30%;
+}
+
+.ShowSearchResults > .showNews > .card > .image > img {
+    width: 100%;
+}
+
+.ShowSearchResults > .showNews > .card > .cardBody {
+    padding: 1.25rem;
+    padding-bottom: 0;
+    flex-basis: 70%;
+}
+
+.ShowSearchResults > .showNews > .card > .cardBody > .cardTitle > h5 {
+    margin-bottom: .75rem;
+}
+
+.ShowSearchResults > .showNews > .card > .cardBody > .cardText > p {
+    text-align: justify;
+}
+
+.ShowSearchResults > .showNews > .card > .cardBody > .cardNavigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ShowSearchResults > .showNews > .card > .cardBody > .cardNavigation > a {
+    margin-bottom: 1rem;
+}
+
+.alert {
+    top:100px;
+    width: 80%;
+    left:10%;
+}
+
+@media only screen and (max-width: 1280px) {
+    .ShowSearchResults > .showNews {
+        width: 80%;
+        left:10%;
+    }
+
+    .ShowSearchResults > .showNews > .card {
+        margin-bottom:2rem;
+    }
+
+    .ShowSearchResults > .searchNavbar {
+        width: 80%;
+        left:10%;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .ShowSearchResults > .showNews {
+        width: 90%;
+        left:5%;
+    }
+
+    .ShowSearchResults > .showNews > .card > .image {
+        flex-basis: 40%;
+    }
+
+    .ShowSearchResults > .showNews > .card > .cardBody {
+        flex-basis: 60%;
+    }
+
+    .ShowSearchResults > .searchNavbar {
+        width: 90%;
+        left:5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ShowSearchResults > .showNews > .card > .image {
+        flex-basis: 50%;
+    }
+
+    .ShowSearchResults > .showNews > .card > .cardBody {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .ShowSearchResults > .showNews > .card > .image {
+        flex-basis: 100%;
+    }
+
+    .ShowSearchResults > .showNews > .card > .cardBody {
+        flex-basis: 100%;
+    }
+
+    .ShowSearchResults > .searchNavbar > .costumSelect {
+        position: relative;
+        flex-basis: auto;
+        flex-shrink: 0;
+        
+    }
+
+    .ShowSearchResults > .searchNavbar > form.search {
+        flex-basis: 80%;
+        margin-right: .5rem;
+    }
+}
